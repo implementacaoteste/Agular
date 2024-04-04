@@ -1,2 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 /*@import "~../node_modules/bootstrap/dist/css/bootstrap.min.css";*/
+
+
+a{
+    text-decoration: none;
+    padding: 0 10px;
+    color: #28282B;
+}
+
+.mercearia-menu{
+    padding-top: 2vh;
+    padding: 1vh 1vh;
+    color: #36454F;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    width: 70%;
+    text-align: center;
+}
