@@ -1,14 +1,17 @@
 
 <div class="mercearia--product--container">
     <app-buscar></app-buscar>
+    <!-- <div *ngFor="let item of {{produto.stringList}}">
+        <p>O produto atual é: {{ item }}</p>
+    </div> -->
     <!-- <img src="/assets/images/{{ produto.codigoBarra + '.jpg' }}" width="200px">
-    <p>Nome: {{ produto.nome }}</p>
-    <p>Preço: {{ 'R$' + produto.preco }}</p>
-    <p>Cor: {{ produto.cor }}</p>
-    <p>Preço com desconto: {{ getPrecoComDesconto().toFixed(2) }}</p>
-    <p>Estoque: {{ produto.estoque > 0 ? 'Em estoque': 'Sem estoque' }}</p>
-   
-    <button (click)="ajustarCarrinho(-1)">-</button>
-    <span>{{ adicionarAoCarrinho }}</span>
-    <button (click)="ajustarCarrinho(+1)">+</button> -->
+        <p>Nome: {{ produto.nome }}</p>
+        <p>Preço: {{ 'R$' + produto.preco }}</p>
+        <p>Cor: {{ produto.cor }}</p>
+        <p>Preço com desconto: {{ getPrecoComDesconto().toFixed(2) }}</p>
+        <p>Estoque: {{ produto.estoque > 0 ? 'Em estoque': 'Sem estoque' }}</p>
+        
+        <button (click)="ajustarCarrinho(-1)">-</button>
+        <span>{{ adicionarAoCarrinho }}</span>
+        <button (click)="ajustarCarrinho(+1)">+</button> -->
 </div>
