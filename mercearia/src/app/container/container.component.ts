@@ -3,12 +3,12 @@ import { BuscarComponent } from './buscar/buscar.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'product-list',
+  selector: 'app-container',
   standalone: true,
   imports: [BuscarComponent, CommonModule],
-  templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.css'
+  templateUrl: './container.component.html',
+  styleUrl: './container.component.css'
 })
-export class ProductListComponent {
+export class ContainerComponent {
   produtoList: string[] = ['Arroz', 'Feijão', 'Rapadura', 'Chiclete']
 }
