@@ -1,13 +1,14 @@
 import { Component } from "@angular/core";
 import { TopMenuComponent } from "./top-menu/top-menu.component";
 import { MainMenuComponent } from "./main-menu/main-menu.component";
+import { CommonModule } from "@angular/common";
 
 @Component({
     standalone: true,
     selector: 'app-header',
     templateUrl: 'header.component.html',
     styleUrl: 'header.component.css',
-    imports: [TopMenuComponent, MainMenuComponent],
+    imports: [TopMenuComponent, MainMenuComponent, CommonModule],
 })
 export class HeaderComponent {
 

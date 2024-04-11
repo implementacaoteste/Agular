@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-  stringList: string[] = ['Arroz', 'Feijão', 'Rapadura', 'Chiclete']
+  produtoList: string[] = ['Arroz', 'Feijão', 'Rapadura', 'Chiclete']
 }
