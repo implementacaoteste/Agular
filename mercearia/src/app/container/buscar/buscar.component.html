@@ -1,5 +1,5 @@
 <div class="mercearia--buscar--produto">
     <input class="mercearia-buscar-produto-input" [value]="textoPesquisa" [(ngModel)]="textoPesquisa">
-    <button class="btn btn-buscar">Buscar</button>
+    <button [ngClass]="{'btn': true, 'btn-buscar': textoPesquisa, 'btn-busca-desabilitada': !textoPesquisa}" [disabled]="!textoPesquisa">Buscar</button>
 </div>
 <div class="mercearia-resultado-busca-por"><p *ngIf="textoPesquisa !=''"><strong>Resultado de busca por:</strong> {{textoPesquisa}}</p></div>
