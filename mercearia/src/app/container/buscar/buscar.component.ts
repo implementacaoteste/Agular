@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './buscar.component.css'
 })
 export class BuscarComponent {
-  textoPesquisa: string = "Homens de guerra";
+  textoPesquisa: string = "";
 
   atualizarTextoPesquisa(event: any){
     this.textoPesquisa = event.target.value;
