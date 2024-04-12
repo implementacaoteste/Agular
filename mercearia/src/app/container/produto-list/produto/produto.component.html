@@ -1,0 +1,18 @@
+<div class="mercearia--product--item">
+        <div class="mercearia--add--to--wishlist">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+        </div>
+        <div class="mercearia-on-sale-tag" *ngIf="produto.percentualDesconto">75% OFF</div>
+        <div class="mercearia-product-image">
+            <img [src]="produto.imagemURL" class="mercearia-product-image">
+        </div>
+        <div class="mercearia--add--to--price">
+            {{produto.preco}}
+        </div>
+        <div class="mercearia--product--name">{{produto.nome}}</div>
+        <div class="mercearia--product--category">{{produto.descricao}}, {{produto.categoria}}, {{produto.marca}}</div>
+        <div class="mercearia--product--available-colors">{{produto.cores.length}} cores disponívels</div>
+        <div class="mercearia--product--in--stock" [ngStyle]="{fontWeight: 'bold', color: produto.estoque > 0 ? 'Green': 'Red'}">
+            {{produto.estoque > 0? 'Em estoque': 'Sem estoque'}}
+        </div>
+</div>
