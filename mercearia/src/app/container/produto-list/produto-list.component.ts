@@ -17,6 +17,7 @@ export class ProdutoListComponent {
       marca: "Nestlé",
       categoria: "Novo",
       preco: 200,
+      percentualDesconto: 15,
       imagemURL: "assets/images/123456.jpg",
       cores: ['azul', 'amarela', 'laranja']
     },
@@ -27,6 +28,7 @@ export class ProdutoListComponent {
       marca: "Garoto",
       categoria: "Quase nova",
       preco: 150,
+      percentualDesconto: 15,
       imagemURL: "cocada.png",
       cores: ['azul', 'vermelha']
     }
