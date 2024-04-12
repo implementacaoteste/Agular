@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProdutoComponent } from './produto/produto.component';
+import { FiltroComponent } from './filtro/filtro.component';
 
 @Component({
   selector: 'produto-list',
   standalone: true,
-  imports: [CommonModule, ProdutoComponent],
+  imports: [CommonModule, ProdutoComponent, FiltroComponent],
   templateUrl: './produto-list.component.html',
   styleUrl: './produto-list.component.css'
 })
@@ -35,5 +36,9 @@ export class ProdutoListComponent {
       imagemURL: "assets/images/rapadura2.jpg",
       cores: ['azul', 'vermelha']
     }
-  ]
+  ];
+
+  totalProdutos = this.produtoList.length;
+  totalComEstoque = this.produtoList.filter(p => p.estoque > 0).length;
+  totalSemEstoque = this.produtoList.filter(p => p.estoque === 0).length;
 }
