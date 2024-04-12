@@ -13,5 +13,8 @@
         <div class="mercearia--product--name">{{prod.nome}}</div>
         <div class="mercearia--product--category">{{prod.descricao}}, {{prod.categoria}}, {{prod.marca}}</div>
         <div class="mercearia--product--available-colors">{{prod.cores.length}} cores disponívels</div>
+        <div class="mercearia--product--in--stock" [ngStyle]="{fontWeight: 'bold', color: prod.estoque > 0 ? 'Green': 'Red'}">
+            {{prod.estoque > 0? 'Em estoque': 'Sem estoque'}}
+        </div>
     </div>
 </div>

@@ -18,6 +18,7 @@ export class ProdutoListComponent {
       categoria: "Novo",
       preco: 200,
       percentualDesconto: 15,
+      estoque: 15,
       imagemURL: "assets/images/123456.jpg",
       cores: ['azul', 'amarela', 'laranja']
     },
@@ -28,8 +29,9 @@ export class ProdutoListComponent {
       marca: "Garoto",
       categoria: "Quase nova",
       preco: 150,
-      percentualDesconto: 15,
-      imagemURL: "cocada.png",
+      percentualDesconto: 0,
+      estoque: 0,
+      imagemURL: "assets/images/rapadura2.jpg",
       cores: ['azul', 'vermelha']
     }
   ]
