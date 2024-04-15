@@ -41,4 +41,13 @@ export class ProdutoListComponent {
   totalProdutos = this.produtoList.length;
   totalComEstoque = this.produtoList.filter(p => p.estoque > 0).length;
   totalSemEstoque = this.produtoList.filter(p => p.estoque === 0).length;
+  
+  radioButtonFiltroSelecionado: string = 'todos';
+
+  onRadioButtonFiltroSelecionadoChanged(){
+    console.log(this.radioButtonFiltroSelecionado);
+    // console.log('chegou');
+    // console.log(valor);
+    // this.radioButtonFiltroSelecionado = valor;
+  }
 }

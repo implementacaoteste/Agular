@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-filtro',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './filtro.component.html',
   styleUrl: './filtro.component.css'
 })
@@ -16,4 +17,12 @@ export class FiltroComponent {
 
   @Input()
   semEstoque: number = 0;
+
+  @Output()
+  radioButtonFiltroSelecionadoChanged: EventEmitter<string> = new EventEmitter<string>();
+  radioButtonFiltroSelecionado: string = 'todos';
+
+  onRadioButtonFiltroSelecionadoChanged() {
+    this.radioButtonFiltroSelecionadoChanged.emit(this.radioButtonFiltroSelecionado);
+  }
 }

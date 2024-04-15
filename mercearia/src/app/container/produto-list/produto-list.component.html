@@ -1,4 +1,14 @@
-<app-filtro [todos]="totalProdutos" [comEstoque]="totalComEstoque" [semEstoque]="totalSemEstoque"></app-filtro>
+<app-filtro
+    [todos]="totalProdutos" 
+    [comEstoque]="totalComEstoque" 
+    [semEstoque]="totalSemEstoque"
+    (radioButtonFiltroSelecionado)="onRadioButtonFiltroSelecionadoChanged()">
+</app-filtro>
 <div class="mercearia--product--container">
-    <app-produto *ngFor="let prod of produtoList" [produto]="prod"></app-produto>
+    <div *ngFor="let prod of produtoList">
+        <app-produto [produto]="prod" *ngIf="radioButtonFiltroSelecionado === 'todos' 
+                                            || (prod.estoque > 0 && radioButtonFiltroSelecionado =='comEstoque')
+                                            || (prod.estoque == 0 && radioButtonFiltroSelecionado == 'semEstoque')"></app-produto>
+    <p>teste {{radioButtonFiltroSelecionado}} e {{prod.estoque}}</p>   
+</div>
 </div>

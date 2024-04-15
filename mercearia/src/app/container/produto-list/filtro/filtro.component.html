@@ -1,12 +1,30 @@
 <div class="filtro-container">
     <span>Filtro: </span>
 
-    <input type="radio" name="filtro" value="Todos">
+    <input 
+        type="radio" 
+        name="filtro" 
+        value="todos" 
+        [(ngModel)]="radioButtonFiltroSelecionado" 
+        (change)="onRadioButtonFiltroSelecionadoChanged()"
+    />
     <span>{{'Todos ('+todos+')'}}</span>
 
-    <input type="radio" name="filtro" value="true">
+    <input 
+        type="radio" 
+        name="filtro" 
+        value="comEstoque" 
+        [(ngModel)]="radioButtonFiltroSelecionado" 
+        (change)="onRadioButtonFiltroSelecionadoChanged()"
+    />
     <span>{{'Com estoque ('+comEstoque+')'}}</span>
 
-    <input type="radio" name="filtro" value="false">
+    <input 
+        type="radio" 
+        name="filtro" 
+        value="semEstoque" 
+        [(ngModel)]="radioButtonFiltroSelecionado" 
+        (change)="onRadioButtonFiltroSelecionadoChanged()"
+    />
     <span>{{'Estoque zerado ('+semEstoque+')'}}</span>
 </div>
